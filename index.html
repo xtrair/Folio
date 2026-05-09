@@ -3,530 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="aihjwoifh — Roblox Game Developer Portfolio" />
-  <title>aihjwoifh // ROBLOX DEV</title>
+  <meta name="description" content="aihjwoifh — developer portfolio" />
+  <title>aihjwoifh — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <div class="stud-bg" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
-  <div class="topbar">
-    <div class="topbar-inner">
-      <span class="tb-item"><span class="tb-dot"></span> SERVER: ONLINE</span>
-      <span class="tb-item">PING: <strong id="ping">12</strong>ms</span>
-      <span class="tb-item">PLAYERS: <strong id="players">1</strong>/50</span>
-      <span class="tb-item tb-time" id="clock">--:--:--</span>
-    </div>
-  </div>
-
   <nav class="nav" id="nav">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-brick"></span>
-        aihjwoifh<span class="dot">_</span>
-      </a>
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">aihjwoifh<span class="logo-dot">.</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about" class="nav-link"><span class="nav-num">01</span> About</a></li>
-        <li><a href="#projects" class="nav-link"><span class="nav-num">02</span> Projects</a></li>
-        <li><a href="#skills" class="nav-link"><span class="nav-num">03</span> Skills</a></li>
-        <li><a href="#contact" class="nav-link"><span class="nav-num">04</span> Contact</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+        <span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <section class="hero" id="hero">
-    <div class="hero-grid">
+  <main>
 
-      <div class="hero-left">
-        <span class="hero-badge">
-          <span class="badge-dot"></span> PLACE_ID://aihjwoifh.dev
-        </span>
-
-        <h1 class="hero-name">
-          <span class="line">ROBLOX</span>
-          <span class="line outline">DEVELOPER</span>
-          <span class="line accent">/ LUAU</span>
+    <section class="hero" id="top">
+      <div class="container">
+        <p class="hero-eyebrow"><span class="status-dot"></span> Available for new projects</p>
+        <h1 class="hero-title">
+          I build thoughtful,<br/>
+          performant software.
         </h1>
-
-        <p class="hero-subtitle">
-          Building interactive games, mechanics &amp; systems inside Roblox Studio. Performance-first, gameplay-obsessed.
+        <p class="hero-lede">
+          Hi — I'm aihjwoifh. A developer focused on clean code, considered design and the small details that make products feel right.
         </p>
-
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            <span class="btn-arrow">▶</span> JOIN EXPERIENCE
-          </a>
-          <a href="#contact" class="btn btn-outline">
-            CONTACT_ME.lua
-          </a>
+          <a href="#work" class="btn btn-primary">View work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch <span class="arrow">→</span></a>
         </div>
+      </div>
+    </section>
 
-        <div class="hero-marquee" aria-hidden="true">
-          <div class="marquee-track">
-            <span>LUAU SCRIPTER</span><span class="m-star">✦</span>
-            <span>GAME MECHANICS</span><span class="m-star">✦</span>
-            <span>ROBLOX STUDIO</span><span class="m-star">✦</span>
-            <span>OPTIMIZATION</span><span class="m-star">✦</span>
-            <span>GAMEPLAY SYSTEMS</span><span class="m-star">✦</span>
-            <span>UI / UX</span><span class="m-star">✦</span>
-            <span>LUAU SCRIPTER</span><span class="m-star">✦</span>
-            <span>GAME MECHANICS</span><span class="m-star">✦</span>
-            <span>ROBLOX STUDIO</span><span class="m-star">✦</span>
-            <span>OPTIMIZATION</span><span class="m-star">✦</span>
+    <section class="section section-bordered" id="about">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-meta">
+            <span class="section-label">About</span>
+          </div>
+          <div class="section-body">
+            <p class="lead">
+              I've spent the last few years building interactive experiences and the systems that power them.
+            </p>
+            <p>
+              I work mostly on gameplay, mechanics and tooling — the kind of code that has to be fast, robust and easy to extend. My focus is craft: writing readable code, designing interfaces that get out of the way, and making sure every interaction feels intentional.
+            </p>
+            <p>
+              I work well alone and just as well in small teams. I'm always interested in projects where the goals are clear and the bar is high.
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-right">
-        <div class="avatar-stage" id="avatarStage">
-          <div class="avatar-shadow"></div>
-
-          <svg class="avatar" viewBox="0 0 220 320" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="gHead" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stop-color="#ffd84d"/>
-                <stop offset="100%" stop-color="#e6b800"/>
-              </linearGradient>
-              <linearGradient id="gTorso" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stop-color="#ff3b2f"/>
-                <stop offset="100%" stop-color="#b81a12"/>
-              </linearGradient>
-              <linearGradient id="gLegs" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stop-color="#1f7be6"/>
-                <stop offset="100%" stop-color="#0f4f99"/>
-              </linearGradient>
-              <linearGradient id="gArm" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stop-color="#ffd84d"/>
-                <stop offset="100%" stop-color="#d4a800"/>
-              </linearGradient>
-            </defs>
-
-            <g class="part part-arm-l">
-              <rect x="14" y="118" width="38" height="92" fill="url(#gArm)"/>
-              <rect x="14" y="118" width="38" height="6" fill="#000" opacity="0.18"/>
-              <rect x="46" y="118" width="6" height="92" fill="#000" opacity="0.22"/>
-            </g>
-
-            <g class="part part-arm-r">
-              <rect x="168" y="118" width="38" height="92" fill="url(#gArm)"/>
-              <rect x="168" y="118" width="38" height="6" fill="#000" opacity="0.18"/>
-              <rect x="200" y="118" width="6" height="92" fill="#000" opacity="0.22"/>
-            </g>
-
-            <g class="part part-torso">
-              <rect x="56" y="118" width="108" height="100" fill="url(#gTorso)"/>
-              <rect x="56" y="118" width="108" height="6" fill="#000" opacity="0.2"/>
-              <rect x="158" y="118" width="6" height="100" fill="#000" opacity="0.25"/>
-              <text x="110" y="180" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="22" font-weight="700" fill="#fff" opacity="0.9">R$</text>
-            </g>
-
-            <g class="part part-legs">
-              <rect x="60" y="218" width="44" height="92" fill="url(#gLegs)"/>
-              <rect x="116" y="218" width="44" height="92" fill="url(#gLegs)"/>
-              <rect x="60" y="218" width="100" height="6" fill="#000" opacity="0.22"/>
-              <rect x="100" y="218" width="6" height="92" fill="#000" opacity="0.25"/>
-              <rect x="156" y="218" width="6" height="92" fill="#000" opacity="0.25"/>
-            </g>
-
-            <g class="part part-head" id="headPart">
-              <rect x="58" y="20" width="104" height="98" fill="url(#gHead)"/>
-              <rect x="58" y="20" width="104" height="6" fill="#fff" opacity="0.18"/>
-              <rect x="156" y="20" width="6" height="98" fill="#000" opacity="0.22"/>
-
-              <g class="eyes" id="eyes">
-                <rect x="80"  y="55" width="14" height="18" fill="#1a1a1a"/>
-                <rect x="126" y="55" width="14" height="18" fill="#1a1a1a"/>
-              </g>
-
-              <path d="M82 88 Q110 105 138 88" stroke="#1a1a1a" stroke-width="5" fill="none" stroke-linecap="round"/>
-            </g>
-          </svg>
-
-          <div class="avatar-floor" aria-hidden="true"></div>
-          <div class="spec spec-1"><strong>HEAD</strong> // RIG_ID 001</div>
-          <div class="spec spec-2"><strong>TORSO</strong> // R15</div>
-          <div class="spec spec-3"><strong>HUMANOID</strong> // ALIVE</div>
-        </div>
-      </div>
-    </div>
-
-    <a href="#about" class="hero-scroll">
-      <span>SCROLL</span>
-      <div class="hero-scroll-line"></div>
-    </a>
-  </section>
-
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">// 01_about</span>
-        <h2 class="section-title">WHO_IS<br/><span class="title-accent">aihjwoifh ?</span></h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text fade-up">
-          <p>I'm a dedicated <strong>Roblox game developer</strong> with hands-on experience building interactive games, gameplay mechanics, and backend systems inside Roblox Studio.</p>
-          <p>My work centers around scripting with <strong>Lua / Luau</strong> — designing smooth gameplay loops, reactive UI systems, and modular architecture that scales cleanly across projects.</p>
-          <p>Performance optimization is core to everything I build. I focus on keeping experiences <strong>lightweight and responsive</strong> so players get the best possible feel, regardless of their device.</p>
-          <p>Beyond the technical side, I care deeply about <strong>player experience</strong> — the moment-to-moment feel of movement, feedback, and interactivity that keeps people engaged.</p>
-
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-symbol">R$</span>
-              <span class="stat-number">5+</span>
-              <span class="stat-label">PROJECTS</span>
-            </div>
-            <div class="stat">
-              <span class="stat-symbol">⌛</span>
-              <span class="stat-number">4+</span>
-              <span class="stat-label">YEARS_EXP</span>
-            </div>
-            <div class="stat">
-              <span class="stat-symbol">{ }</span>
-              <span class="stat-number">LUAU</span>
-              <span class="stat-label">PRIMARY_LANG</span>
-            </div>
+    <section class="section section-bordered" id="work">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-meta">
+            <span class="section-label">Selected work</span>
+            <p class="section-meta-note">A few recent projects. Replace these with the real ones whenever you're ready.</p>
           </div>
-        </div>
+          <div class="section-body">
+            <ul class="project-list">
 
-        <div class="about-visual fade-up">
-          <div class="code-window">
-            <div class="code-titlebar">
-              <span class="cw-dot r"></span>
-              <span class="cw-dot y"></span>
-              <span class="cw-dot g"></span>
-              <span class="cw-title">PlayerService.lua</span>
-            </div>
-            <pre class="code-body"><code><span class="kw">local</span> Players <span class="op">=</span> game<span class="op">:</span><span class="fn">GetService</span>(<span class="str">"Players"</span>)
-<span class="kw">local</span> Maid    <span class="op">=</span> <span class="fn">require</span>(script.Maid)
+              <li class="project">
+                <a href="https://www.roblox.com/games/87341346192053/Dig-or-Die" target="_blank" rel="noopener" class="project-link">
+                  <div class="project-thumb thumb-1"></div>
+                  <div class="project-info">
+                    <div class="project-meta">
+                      <span>2026</span>
+                      <span class="dot-sep">·</span>
+                      <span>Roblox</span>
+                    </div>
+                    <h3 class="project-title">Dig or Die</h3>
+                    <p class="project-desc">Mining-driven Roblox experience with custom progression and survival mechanics.</p>
+                  </div>
+                  <span class="project-arrow">↗</span>
+                </a>
+              </li>
 
-Players.PlayerAdded<span class="op">:</span><span class="fn">Connect</span>(<span class="kw">function</span>(plr)
-  <span class="kw">local</span> m <span class="op">=</span> Maid.<span class="fn">new</span>()
+              <li class="project">
+                <a href="https://www.roblox.com/games/136228135688866/Hunt-the-Brainrot" target="_blank" rel="noopener" class="project-link">
+                  <div class="project-thumb thumb-2"></div>
+                  <div class="project-info">
+                    <div class="project-meta">
+                      <span>2025</span>
+                      <span class="dot-sep">·</span>
+                      <span>Roblox</span>
+                    </div>
+                    <h3 class="project-title">Hunt the Brainrot</h3>
+                    <p class="project-desc">Hunt-and-collect game built around brainrot characters and custom gameplay loops.</p>
+                  </div>
+                  <span class="project-arrow">↗</span>
+                </a>
+              </li>
 
-  plr.CharacterAdded<span class="op">:</span><span class="fn">Connect</span>(<span class="kw">function</span>(char)
-    <span class="cmt">-- gameplay starts here</span>
-    char<span class="op">:</span><span class="fn">WaitForChild</span>(<span class="str">"Humanoid"</span>).WalkSpeed <span class="op">=</span> <span class="num">22</span>
-  <span class="kw">end</span>)
+              <li class="project">
+                <a href="https://www.roblox.com/games/99235417621490/Dont-Stop" target="_blank" rel="noopener" class="project-link">
+                  <div class="project-thumb thumb-3"></div>
+                  <div class="project-info">
+                    <div class="project-meta">
+                      <span>2025</span>
+                      <span class="dot-sep">·</span>
+                      <span>Roblox</span>
+                    </div>
+                    <h3 class="project-title">Don't Stop</h3>
+                    <p class="project-desc">A movement-focused Roblox experience built around custom mechanics and momentum.</p>
+                  </div>
+                  <span class="project-arrow">↗</span>
+                </a>
+              </li>
 
-  plr.AncestryChanged<span class="op">:</span><span class="fn">Connect</span>(<span class="kw">function</span>() m<span class="op">:</span><span class="fn">Destroy</span>() <span class="kw">end</span>)
-<span class="kw">end</span>)</code></pre>
-          </div>
+              <li class="project">
+                <a href="https://www.roblox.com/games/93339579042452/Gravity-Runner" target="_blank" rel="noopener" class="project-link">
+                  <div class="project-thumb thumb-4"></div>
+                  <div class="project-info">
+                    <div class="project-meta">
+                      <span>2024</span>
+                      <span class="dot-sep">·</span>
+                      <span>Roblox</span>
+                    </div>
+                    <h3 class="project-title">Gravity Runner</h3>
+                    <p class="project-desc">A dynamic gameplay experience with gravity-based mechanics and custom logic.</p>
+                  </div>
+                  <span class="project-arrow">↗</span>
+                </a>
+              </li>
 
-          <div class="about-card">
-            <div class="about-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <h3>Game Developer</h3>
-            <p>Full gameplay experiences from concept to release inside Roblox Studio.</p>
-          </div>
-          <div class="about-card">
-            <div class="about-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 18l2-2-4-4-4 4 2 2M8 6l-2 2 4 4 4-4-2-2"/></svg>
-            </div>
-            <h3>Luau Scripter</h3>
-            <p>Clean, modular, optimized Luau code for mechanics and systems.</p>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="projects section" id="projects">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">// 02_projects</span>
-        <h2 class="section-title">EXPERIENCES<br/><span class="title-accent">/ shipped &amp; live</span></h2>
-      </div>
-
-      <div class="section-subheader fade-up">
-        <h3 class="section-subtitle"><span class="subtitle-bracket">[</span> GAMES <span class="subtitle-bracket">]</span></h3>
-      </div>
-
-      <div class="games-grid fade-up">
-
-        <div class="game-card">
-          <div class="game-card-top">
-            <div class="game-card-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M5.332 21.98L2.02 18.668l7.324-7.324-7.324-7.324L5.332 0.708l7.324 7.324 7.324-7.324 3.312 3.312-7.324 7.324 7.324 7.324-3.312 3.312-7.324-7.324z"/></svg>
+    <section class="section section-bordered" id="stack">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-meta">
+            <span class="section-label">Stack</span>
+          </div>
+          <div class="section-body">
+            <div class="stack-list">
+              <div class="stack-row">
+                <span class="stack-key">Languages</span>
+                <span class="stack-val">Lua, Luau, JavaScript, TypeScript</span>
+              </div>
+              <div class="stack-row">
+                <span class="stack-key">Focus</span>
+                <span class="stack-val">Gameplay systems, mechanics, UI engineering</span>
+              </div>
+              <div class="stack-row">
+                <span class="stack-key">Tools</span>
+                <span class="stack-val">Roblox Studio, VS Code, Git</span>
+              </div>
+              <div class="stack-row">
+                <span class="stack-key">Currently</span>
+                <span class="stack-val">Open to new collaborations</span>
+              </div>
             </div>
-            <span class="game-id">PLACE_ID :: 99235417621490</span>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Mechanics</span>
-            <span class="tag">Scripting</span>
-          </div>
-          <h3 class="project-title">Don't Stop</h3>
-          <p class="project-desc">A custom-mechanics gameplay experience built in Roblox Studio.</p>
-          <a href="https://www.roblox.com/games/99235417621490/Dont-Stop" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-            <span class="btn-arrow">▶</span> PLAY
-          </a>
-        </div>
-
-        <div class="game-card">
-          <div class="game-card-top">
-            <div class="game-card-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M5.332 21.98L2.02 18.668l7.324-7.324-7.324-7.324L5.332 0.708l7.324 7.324 7.324-7.324 3.312 3.312-7.324 7.324 7.324 7.324-3.312 3.312-7.324-7.324z"/></svg>
-            </div>
-            <span class="game-id">PLACE_ID :: 93339579042452</span>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Dynamic Systems</span>
-            <span class="tag">Logic</span>
-          </div>
-          <h3 class="project-title">Gravity Runner</h3>
-          <p class="project-desc">A dynamic gameplay experience with gravity-based mechanics and custom logic.</p>
-          <a href="https://www.roblox.com/games/93339579042452/Gravity-Runner" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-            <span class="btn-arrow">▶</span> PLAY
-          </a>
-        </div>
-
-      </div>
-
-      <div class="section-subheader fade-up">
-        <h3 class="section-subtitle"><span class="subtitle-bracket">[</span> SYSTEM_DEMOS <span class="subtitle-bracket">]</span></h3>
-        <p class="section-subdesc">Video demonstrations of systems and mechanics built in Roblox Studio</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <div class="project-card fade-up">
-          <div class="project-video-wrap">
-            <iframe src="https://www.youtube.com/embed/FN7sBlz94CQ" title="System Demo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag">Mechanics</span>
-              <span class="tag">Scripting</span>
-            </div>
-            <h3 class="project-title">Mechanics Demo</h3>
-            <p class="project-desc">Demonstration of custom mechanics and scripting systems.</p>
-          </div>
-        </div>
-
-        <div class="project-card fade-up">
-          <div class="project-video-wrap">
-            <iframe src="https://www.youtube.com/embed/8oI-1d65NdE" title="System Demo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag">Dynamic Systems</span>
-              <span class="tag">Logic</span>
-            </div>
-            <h3 class="project-title">Dynamic Systems Demo</h3>
-            <p class="project-desc">Showcase of gameplay logic and dynamic systems.</p>
-          </div>
-        </div>
-
-        <div class="project-card fade-up">
-          <div class="project-video-wrap">
-            <iframe src="https://www.youtube.com/embed/YEmq54TBg6s" title="System Demo 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag">Interactive</span>
-              <span class="tag">Technical</span>
-            </div>
-            <h3 class="project-title">Technical Showcase</h3>
-            <p class="project-desc">Technical gameplay showcase with interactive mechanics.</p>
-          </div>
-        </div>
-
-        <div class="project-card fade-up">
-          <div class="project-video-wrap">
-            <iframe src="https://www.youtube.com/embed/BJlT-_J75h8" title="System Demo 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag">Prototype</span>
-              <span class="tag">Custom Script</span>
-            </div>
-            <h3 class="project-title">Prototype Demo</h3>
-            <p class="project-desc">Demonstration of custom scripting solutions and prototype systems.</p>
-          </div>
-        </div>
-
-        <div class="project-card fade-up">
-          <div class="project-video-wrap">
-            <iframe src="https://www.youtube.com/embed/zKLYVcXLR-4" title="System Demo 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="tag">Multi-System</span>
-              <span class="tag">Feature</span>
-            </div>
-            <h3 class="project-title">Feature Showcase</h3>
-            <p class="project-desc">Gameplay feature showcase with multiple systems.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="skills section" id="skills">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">// 03_skills</span>
-        <h2 class="section-title">PLAYER_STATS<br/><span class="title-accent">/ leaderboard</span></h2>
-      </div>
-
-      <div class="leaderboard fade-up">
-        <div class="lb-header">
-          <span class="lb-col lb-rank">#</span>
-          <span class="lb-col lb-name">SKILL</span>
-          <span class="lb-col lb-bar">PROGRESS</span>
-          <span class="lb-col lb-lvl">LVL</span>
-        </div>
-
-        <div class="lb-row" data-width="92" data-lvl="92">
-          <span class="lb-col lb-rank">01</span>
-          <span class="lb-col lb-name"><span class="lb-icon">▣</span> Roblox Studio</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">92</span>
-        </div>
-        <div class="lb-row" data-width="90" data-lvl="90">
-          <span class="lb-col lb-rank">02</span>
-          <span class="lb-col lb-name"><span class="lb-icon">{ }</span> Lua / Luau</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">90</span>
-        </div>
-        <div class="lb-row" data-width="88" data-lvl="88">
-          <span class="lb-col lb-rank">03</span>
-          <span class="lb-col lb-name"><span class="lb-icon">▶</span> Game Mechanics</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">88</span>
-        </div>
-        <div class="lb-row" data-width="87" data-lvl="87">
-          <span class="lb-col lb-rank">04</span>
-          <span class="lb-col lb-name"><span class="lb-icon">◆</span> Gameplay Systems</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">87</span>
-        </div>
-        <div class="lb-row" data-width="85" data-lvl="85">
-          <span class="lb-col lb-rank">05</span>
-          <span class="lb-col lb-name"><span class="lb-icon">⚡</span> Optimization</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">85</span>
-        </div>
-        <div class="lb-row" data-width="84" data-lvl="84">
-          <span class="lb-col lb-rank">06</span>
-          <span class="lb-col lb-name"><span class="lb-icon">↯</span> Performance</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">84</span>
-        </div>
-        <div class="lb-row" data-width="83" data-lvl="83">
-          <span class="lb-col lb-rank">07</span>
-          <span class="lb-col lb-name"><span class="lb-icon">⛒</span> Debugging</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">83</span>
-        </div>
-        <div class="lb-row" data-width="82" data-lvl="82">
-          <span class="lb-col lb-rank">08</span>
-          <span class="lb-col lb-name"><span class="lb-icon">▤</span> UI Systems</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">82</span>
-        </div>
-        <div class="lb-row" data-width="78" data-lvl="78">
-          <span class="lb-col lb-rank">09</span>
-          <span class="lb-col lb-name"><span class="lb-icon">▥</span> Game Design</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">78</span>
-        </div>
-        <div class="lb-row" data-width="75" data-lvl="75">
-          <span class="lb-col lb-rank">10</span>
-          <span class="lb-col lb-name"><span class="lb-icon">○</span> Physics Systems</span>
-          <span class="lb-col lb-bar"><span class="lb-bar-track"><span class="lb-bar-fill"></span></span></span>
-          <span class="lb-col lb-lvl">75</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact section" id="contact">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">// 04_contact</span>
-        <h2 class="section-title">JOIN_SERVER<br/><span class="title-accent">/ let's build</span></h2>
-      </div>
-
-      <div class="contact-grid fade-up">
-        <div class="contact-left">
-          <p class="contact-intro">Have a project in mind or want to collaborate? Drop a message — I'm open to new game development opportunities.</p>
-
-          <a href="mailto:youminecr@email.com" class="contact-email">
-            <span class="ce-arrow">▶</span> youminecr@email.com
-          </a>
-
-          <div class="contact-socials">
-            <a href="https://www.youtube.com/@ltunfbnmk" target="_blank" rel="noopener" class="social-btn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              YouTube
-            </a>
-            <a href="#" class="social-btn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
-              aihjwoifh
-            </a>
-            <a href="https://www.roblox.com/users/311733056/profile" target="_blank" rel="noopener" class="social-btn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.332 21.98L2.02 18.668l7.324-7.324-7.324-7.324L5.332 0.708l7.324 7.324 7.324-7.324 3.312 3.312-7.324 7.324 7.324 7.324-3.312 3.312-7.324-7.324z"/></svg>
-              Roblox
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-right">
-          <div class="join-card">
-            <div class="join-header">
-              <span class="join-status"><span class="join-dot"></span> ACCEPTING NEW PLAYERS</span>
-              <span class="join-region">REGION :: WORLDWIDE</span>
-            </div>
-            <div class="join-row">
-              <span class="join-label">EMAIL</span>
-              <span class="join-value">youminecr@email.com</span>
-            </div>
-            <div class="join-row">
-              <span class="join-label">AVAILABILITY</span>
-              <span class="join-value">Open to new projects</span>
-            </div>
-            <div class="join-row">
-              <span class="join-label">FOCUS</span>
-              <span class="join-value">Roblox Game Development</span>
-            </div>
-            <div class="join-row">
-              <span class="join-label">RESPONSE</span>
-              <span class="join-value">&lt; 24h typical</span>
-            </div>
-            <a href="mailto:youminecr@email.com" class="btn btn-primary btn-block">
-              <span class="btn-arrow">▶</span> JOIN SERVER
-            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section section-bordered" id="contact">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-meta">
+            <span class="section-label">Contact</span>
+          </div>
+          <div class="section-body">
+            <h2 class="contact-title">Let's work together.</h2>
+            <p class="contact-lede">
+              I'm currently open to new projects. The best way to reach me is on Discord — I usually respond within a day.
+            </p>
+            <button type="button" class="contact-primary" id="discord-handle" data-handle="aihjwoifh">
+              <span class="contact-primary-label">Discord</span>
+              <span class="contact-primary-value">aihjwoifh</span>
+              <span class="contact-primary-hint">Click to copy</span>
+            </button>
+            <ul class="contact-socials">
+              <li><a href="https://www.youtube.com/@ltunfbnmk" target="_blank" rel="noopener">YouTube <span class="ext">↗</span></a></li>
+              <li><a href="https://www.roblox.com/users/311733056/profile" target="_blank" rel="noopener">Roblox <span class="ext">↗</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <span class="nav-logo"><span class="logo-brick"></span> aihjwoifh<span class="dot">_</span></span>
-          <p>// Roblox Developer Portfolio</p>
-        </div>
-        <nav class="footer-nav">
-          <a href="#hero">HOME</a>
-          <a href="#projects">PROJECTS</a>
-          <a href="#contact">CONTACT</a>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 aihjwoifh — Built with Luau in mind</p>
+      <div class="footer-inner">
+        <span class="footer-brand">aihjwoifh<span class="logo-dot">.</span></span>
+        <span class="footer-meta">© 2026 — All rights reserved</span>
       </div>
     </div>
   </footer>
