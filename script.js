@@ -68,6 +68,22 @@ const fadeObserver = new IntersectionObserver(
 
 document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
 
+const themeToggle = document.getElementById('theme-toggle');
+const root = document.documentElement;
+
+function setTheme(theme) {
+  if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+  else root.removeAttribute('data-theme');
+  localStorage.setItem('theme', theme);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
+}
+
 const discordBtn = document.getElementById('discord-handle');
 if (discordBtn) {
   const hintEl = discordBtn.querySelector('.contact-primary-hint');
