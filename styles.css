@@ -12,6 +12,7 @@
   --text-3:    #9a9a9d;
   --border:    #e3e1d8;
   --border-2:  #d6d3c8;
+  --nav-bg:    rgba(245, 244, 239, 0.78);
 
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'Menlo', monospace;
@@ -20,6 +21,21 @@
 
   --container-max: 1080px;
   --section-pad: 120px;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg:        #111111;
+  --bg-2:      #1a1a1a;
+  --text:      #f0efea;
+  --text-2:    #a4a4a4;
+  --text-3:    #6e6e6e;
+  --border:    #262626;
+  --border-2:  #363636;
+  --nav-bg:    rgba(17, 17, 17, 0.78);
+
+  color-scheme: dark;
 }
 
 html {
@@ -61,11 +77,11 @@ button { font: inherit; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(245, 244, 239, 0.78);
+  background: var(--nav-bg);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), background var(--transition);
 }
 .nav.scrolled { border-bottom-color: var(--border); }
 
@@ -109,6 +125,35 @@ button { font: inherit; }
   height: 1px;
   background: var(--text);
 }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition);
+  flex: none;
+}
+.theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.theme-icon-sun { display: none; }
+.theme-icon-moon { display: block; }
+[data-theme="dark"] .theme-icon-sun { display: block; }
+[data-theme="dark"] .theme-icon-moon { display: none; }
 
 .nav-toggle {
   display: none;
@@ -268,7 +313,7 @@ button { font: inherit; }
 }
 .project-link {
   display: grid;
-  grid-template-columns: 110px 1fr 24px;
+  grid-template-columns: 160px 1fr 24px;
   gap: 28px;
   align-items: center;
   padding: 22px 0;
@@ -282,17 +327,21 @@ button { font: inherit; }
   padding-left: 6px;
 }
 .project-thumb {
-  width: 110px;
-  height: 72px;
+  width: 160px;
+  height: 90px;
   border-radius: 6px;
-  background: var(--text);
+  background-color: var(--border-2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  transition: opacity 0.4s ease;
 }
-.thumb-1 { background: linear-gradient(135deg, #d4cfc1 0%, #847d6e 100%); }
-.thumb-2 { background: linear-gradient(135deg, #b9bbb6 0%, #565a55 100%); }
-.thumb-3 { background: linear-gradient(135deg, #d3a594 0%, #7e554a 100%); }
-.thumb-4 { background: linear-gradient(135deg, #b6bca4 0%, #5e6453 100%); }
+.thumb-1 { background-image: url('images/dig-or-die.png'); }
+.thumb-2 { background-image: url('images/hunt-the-brainrot.png'); }
+.thumb-3 { background-image: url('images/dont-stop.png'); }
+.thumb-4 { background-image: url('images/gravity-runner.png'); }
 
 .project-info {
   display: flex;
@@ -499,6 +548,7 @@ button { font: inherit; }
 
 @media (max-width: 640px) {
   .nav-toggle { display: flex; z-index: 110; }
+  .theme-toggle { z-index: 110; position: relative; }
   .nav-links {
     position: fixed;
     inset: 0;
