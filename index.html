@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="aihjwoifh — developer portfolio" />
-  <title>aihjwoifh — Portfolio</title>
+  <meta name="description" content="aihjwoifh, Roblox developer portfolio" />
+  <title>aihjwoifh / Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
 </head>
 <body>
 
@@ -21,6 +28,15 @@
         <li><a href="#stack" class="nav-link">Stack</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span>
       </button>
@@ -33,11 +49,11 @@
       <div class="container">
         <p class="hero-eyebrow"><span class="status-dot"></span> Available for new projects</p>
         <h1 class="hero-title">
-          I build thoughtful,<br/>
-          performant software.
+          I build games<br/>
+          on Roblox.
         </h1>
         <p class="hero-lede">
-          Hi — I'm aihjwoifh. A developer focused on clean code, considered design and the small details that make products feel right.
+          I'm aihjwoifh, a Roblox developer working on gameplay and game systems.
         </p>
         <div class="hero-actions">
           <a href="#work" class="btn btn-primary">View work</a>
@@ -54,13 +70,13 @@
           </div>
           <div class="section-body">
             <p class="lead">
-              I've spent the last few years building interactive experiences and the systems that power them.
+              I've been building games on Roblox for the last few years.
             </p>
             <p>
-              I work mostly on gameplay, mechanics and tooling — the kind of code that has to be fast, robust and easy to extend. My focus is craft: writing readable code, designing interfaces that get out of the way, and making sure every interaction feels intentional.
+              Most of my work is gameplay code. Mechanics, systems, sometimes UI. I focus on writing clean, fast code that's easy to come back to later.
             </p>
             <p>
-              I work well alone and just as well in small teams. I'm always interested in projects where the goals are clear and the bar is high.
+              I work alone or in small teams. Always open to new projects.
             </p>
           </div>
         </div>
@@ -72,14 +88,14 @@
         <div class="section-grid">
           <div class="section-meta">
             <span class="section-label">Selected work</span>
-            <p class="section-meta-note">A few recent projects. Replace these with the real ones whenever you're ready.</p>
+            <p class="section-meta-note">All scripts in these games were written by me, fully or partially.</p>
           </div>
           <div class="section-body">
             <ul class="project-list">
 
               <li class="project">
                 <a href="https://www.roblox.com/games/87341346192053/Dig-or-Die" target="_blank" rel="noopener" class="project-link">
-                  <div class="project-thumb thumb-1"></div>
+                  <div class="project-thumb thumb-1" role="img" aria-label="Dig or Die thumbnail"></div>
                   <div class="project-info">
                     <div class="project-meta">
                       <span>2026</span>
@@ -87,7 +103,7 @@
                       <span>Roblox</span>
                     </div>
                     <h3 class="project-title">Dig or Die</h3>
-                    <p class="project-desc">Mining-driven Roblox experience with custom progression and survival mechanics.</p>
+                    <p class="project-desc">A mining and survival game on Roblox.</p>
                   </div>
                   <span class="project-arrow">↗</span>
                 </a>
@@ -95,7 +111,7 @@
 
               <li class="project">
                 <a href="https://www.roblox.com/games/136228135688866/Hunt-the-Brainrot" target="_blank" rel="noopener" class="project-link">
-                  <div class="project-thumb thumb-2"></div>
+                  <div class="project-thumb thumb-2" role="img" aria-label="Hunt the Brainrot thumbnail"></div>
                   <div class="project-info">
                     <div class="project-meta">
                       <span>2025</span>
@@ -103,7 +119,7 @@
                       <span>Roblox</span>
                     </div>
                     <h3 class="project-title">Hunt the Brainrot</h3>
-                    <p class="project-desc">Hunt-and-collect game built around brainrot characters and custom gameplay loops.</p>
+                    <p class="project-desc">A brainrot-themed hunt-and-collect game.</p>
                   </div>
                   <span class="project-arrow">↗</span>
                 </a>
@@ -111,7 +127,7 @@
 
               <li class="project">
                 <a href="https://www.roblox.com/games/99235417621490/Dont-Stop" target="_blank" rel="noopener" class="project-link">
-                  <div class="project-thumb thumb-3"></div>
+                  <div class="project-thumb thumb-3" role="img" aria-label="Don't Stop thumbnail"></div>
                   <div class="project-info">
                     <div class="project-meta">
                       <span>2025</span>
@@ -119,7 +135,7 @@
                       <span>Roblox</span>
                     </div>
                     <h3 class="project-title">Don't Stop</h3>
-                    <p class="project-desc">A movement-focused Roblox experience built around custom mechanics and momentum.</p>
+                    <p class="project-desc">A movement game built around speed and momentum.</p>
                   </div>
                   <span class="project-arrow">↗</span>
                 </a>
@@ -127,7 +143,7 @@
 
               <li class="project">
                 <a href="https://www.roblox.com/games/93339579042452/Gravity-Runner" target="_blank" rel="noopener" class="project-link">
-                  <div class="project-thumb thumb-4"></div>
+                  <div class="project-thumb thumb-4" role="img" aria-label="Gravity Runner thumbnail"></div>
                   <div class="project-info">
                     <div class="project-meta">
                       <span>2024</span>
@@ -135,7 +151,7 @@
                       <span>Roblox</span>
                     </div>
                     <h3 class="project-title">Gravity Runner</h3>
-                    <p class="project-desc">A dynamic gameplay experience with gravity-based mechanics and custom logic.</p>
+                    <p class="project-desc">A gravity-based action game with custom mechanics.</p>
                   </div>
                   <span class="project-arrow">↗</span>
                 </a>
@@ -186,7 +202,7 @@
           <div class="section-body">
             <h2 class="contact-title">Let's work together.</h2>
             <p class="contact-lede">
-              I'm currently open to new projects. The best way to reach me is on Discord — I usually respond within a day.
+              I'm open to new projects. The best way to reach me is on Discord, I usually reply within a day.
             </p>
             <button type="button" class="contact-primary" id="discord-handle" data-handle="aihjwoifh">
               <span class="contact-primary-label">Discord</span>
@@ -208,7 +224,7 @@
     <div class="container">
       <div class="footer-inner">
         <span class="footer-brand">aihjwoifh<span class="logo-dot">.</span></span>
-        <span class="footer-meta">© 2026 — All rights reserved</span>
+        <span class="footer-meta">© 2026 aihjwoifh. All rights reserved.</span>
       </div>
     </div>
   </footer>
