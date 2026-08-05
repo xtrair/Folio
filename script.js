@@ -54,19 +54,70 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-const fadeObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-);
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fadeTargets = document.querySelectorAll('.fade-up');
 
-document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+if (!('IntersectionObserver' in window) || reduceMotion) {
+  fadeTargets.forEach(el => el.classList.add('visible'));
+} else {
+  const fadeObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  fadeTargets.forEach(el => fadeObserver.observe(el));
+}
+
+/* metric count-up */
+const metricValues = document.querySelectorAll('.metric-value');
+
+function formatMetric(el, value) {
+  const decimals = Number(el.dataset.decimals || 0);
+  const suffix = el.dataset.suffix || '';
+  return value.toFixed(decimals) + suffix;
+}
+
+function countUp(el) {
+  const target = Number(el.dataset.value);
+  if (!isFinite(target)) return;
+  const duration = 1100;
+  const start = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = formatMetric(el, target * eased);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+
+  el.textContent = formatMetric(el, 0);
+  requestAnimationFrame(step);
+}
+
+if (metricValues.length) {
+  if (!('IntersectionObserver' in window) || reduceMotion) {
+    metricValues.forEach(el => { el.textContent = formatMetric(el, Number(el.dataset.value)); });
+  } else {
+    const metricObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            countUp(entry.target);
+            metricObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    metricValues.forEach(el => metricObserver.observe(el));
+  }
+}
 
 const themeToggle = document.getElementById('theme-toggle');
 const root = document.documentElement;
